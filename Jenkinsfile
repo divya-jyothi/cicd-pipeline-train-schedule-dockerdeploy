@@ -1,4 +1,4 @@
-pipeline {#
+pipeline {
     agent any
     stages {
         stage('Build') {
@@ -33,7 +33,7 @@ pipeline {#
                     }
                 }
             }
-        }#
+        }
         stage('DeployToProduction') {
             when {
                 branch 'master'
