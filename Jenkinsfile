@@ -14,9 +14,9 @@ pipeline {
             }
             steps {
                 script {
-                    app = docker.build("ncodeitdocker/train-schedule1")
+                    app = docker.build("ncodeitdocker/train-schedule")
                     app.inside {
-                        sh 'echo $(curl localhost:8081)'
+                        sh 'echo $(curl localhost:8080)'
                     }
                 }
             }
